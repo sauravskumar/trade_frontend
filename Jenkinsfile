@@ -7,18 +7,11 @@ pipeline {
   }
   stages {
     stage('Deliver') {
-      parallel {
         stage('Deliver') {
           steps {
             sh 'npm run start'
           }
         }
-        stage('Build') {
-          steps {
-            sh 'ls'
-          }
-        }
-      }
     }
   }
 }
