@@ -1,21 +1,14 @@
 pipeline {
   agent {
-    docker {
-      image 'node'
-      args '-p 3000:3000 --name trade_frontend'
+    dockerfile {
+      filename 'docker-compose.yml'
     }
     
   }
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
-        sh 'npm run build'
-      }
-    }
-    stage('Deliver') {
-      steps {
-        sh 'npm run start'
+        sh 'ls'
       }
     }
   }
