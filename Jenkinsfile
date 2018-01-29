@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'python'
-      args '-p 3000:3000 --name trade_frontend'
+    dockerfile {
+      filename 'Dockerfile'
     }
     
   }
