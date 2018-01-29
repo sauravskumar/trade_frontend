@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'pwd && ls'
         sh 'cd /usr/src/app && ls'
-        sh 'npm run start'
+        sh 'pwd && cd /usr/src/app && npm run start'
       }
     }
   }
