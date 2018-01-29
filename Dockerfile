@@ -1,3 +1,3 @@
-FROM UBUNTU:16.04
+FROM node
 RUN npm install
 RUN npm run build
