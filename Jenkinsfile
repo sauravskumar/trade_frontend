@@ -8,7 +8,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pwd && cd /usr/src/app'
+        sh 'cd /usr/src/app'
+        ws(dir: '/usr/src/app') {
+          sh 'npm run start'
+        }
+        
       }
     }
   }
