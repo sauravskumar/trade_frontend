@@ -8,9 +8,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pwd && ls'
-        sh 'cd /usr/src/app && ls'
-        sh 'pwd && cd /usr/src/app && npm run start'
+        sh 'pwd && cd /usr/src/app && docker'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'ls'
       }
     }
   }
