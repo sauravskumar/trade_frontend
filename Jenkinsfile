@@ -8,7 +8,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd /usr/src/app && npm run start &'
+        sh 'cd /usr/src/app && npm run start'
+      }
+    }
+    stage('') {
+      steps {
+        sh 'docker'
       }
     }
   }
