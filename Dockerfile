@@ -18,6 +18,6 @@ COPY . /usr/src/app
 
 RUN npm run build
 
-EXPOSE 3000
-
 VOLUME /var/run/docker.sock
+
+EXPOSE 3000
