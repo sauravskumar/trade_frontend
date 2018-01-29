@@ -9,6 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'ls'
+        sh 'npm run start'
       }
     }
   }
