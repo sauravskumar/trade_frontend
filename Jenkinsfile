@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd /usr/src/app'
+        sh 'pwd && ls'
         sh 'npm run start'
       }
     }
