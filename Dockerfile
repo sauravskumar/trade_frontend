@@ -14,7 +14,3 @@ ENV docker true
 COPY . /usr/src/app
 
 RUN npm run build
-
-RUN npm cache clean
-
-CMD ["/bin/bash"]
