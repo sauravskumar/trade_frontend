@@ -6,9 +6,10 @@ pipeline {
     
   }
   stages {
-    stage('Build') {
+    stage('') {
       steps {
-        sh 'ls'
+        dir(path: '/usr/src/app')
+        input 'Working correctly?'
       }
     }
   }
