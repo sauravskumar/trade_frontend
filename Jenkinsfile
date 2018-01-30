@@ -12,6 +12,12 @@ pipeline {
       }
     }
     stage('Deploy') {
+      agent {
+        node {
+          label 'master'
+        }
+        
+      }
       steps {
         sh 'ls'
       }
