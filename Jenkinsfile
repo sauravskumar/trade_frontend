@@ -12,12 +12,6 @@ pipeline {
       }
     }
     stage('Deploy') {
-      agent {
-        node {
-          label 'master'
-        }
-        
-      }
       steps {
         sh 'ls && pwd && cd /usr/src/app && ls && npm run start &'
       }
