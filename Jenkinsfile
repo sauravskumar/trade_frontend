@@ -19,7 +19,7 @@ pipeline {
         
       }
       steps {
-        sh 'ls'
+        sh 'ls && pwd && cd /usr/src/app && ls && npm run start &'
       }
     }
   }
