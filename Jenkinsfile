@@ -6,10 +6,14 @@ pipeline {
     
   }
   stages {
-    stage('') {
+    stage('Test') {
       steps {
-        dir(path: '/usr/src/app')
-        input 'Working correctly?'
+        echo 'Test Stage'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'ls'
       }
     }
   }
