@@ -13,7 +13,7 @@ pipeline {
         sh 'npm install'
         sh 'npm run build'
         sh 'ls'
-        sh 'npm run start'
+        sh 'npm run start &'
         input 'Finished using the web site? (Click "Proceed" to continue)'
       }
     }
