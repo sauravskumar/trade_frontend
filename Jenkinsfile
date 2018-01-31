@@ -12,7 +12,18 @@ pipeline {
       steps {
         sh 'npm install'
         sh 'npm run build'
-        sh 'docker'
+      }
+    }
+    stage('') {
+      agent {
+        docker {
+          image 'node'
+          args '-p 3000:300'
+        }
+        
+      }
+      steps {
+        sh 'ls'
       }
     }
   }
