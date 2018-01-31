@@ -21,7 +21,7 @@ pipeline {
       steps {
         sh 'docker stop trade_frontend'
         sh 'docker rm trade_frontend'
-        sh 'docker run -d --name trade_frontend -p 3000:3000 localhost:5000/trade_frontend /bin/bash -c "npm run start &"'
+        sh 'docker run -d --name trade_frontend -p 3000:3000 localhost:5000/trade_frontend /bin/bash -c "npm run start"'
         input message: 'Finished using the web site? (Click "Proceed" to continue)'
       }
     }
