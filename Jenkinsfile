@@ -19,14 +19,14 @@ pipeline {
     }
     stage('Deploy') {
       agent {
-        docker {
-          image 'node'
-          args '-p 3000:300'
+        node {
+          label 'master'
         }
         
       }
       steps {
         sh 'ls'
+        sh 'pwd'
       }
     }
   }
