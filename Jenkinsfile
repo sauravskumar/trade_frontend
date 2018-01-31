@@ -2,17 +2,10 @@ pipeline {
   agent none
   stages {
     stage('Build') {
-      agent {
-        dockerfile {
-          filename 'Dockerfile'
-        }
-        
-      }
       steps {
-        sh 'npm install'
-        sh 'npm run build'
-        sh 'ls'
-        sh 'npm run start &'
+        sh 'docker build --name trade_backend .'
+        sh 'docker run -d --name trade_frontend -p 3000:3000 trade_frontend'
+        sh 'docker exec trade_frontend /bin/bash && ls && pwd'
       }
     }
     stage('Deploy') {
