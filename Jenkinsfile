@@ -9,18 +9,12 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t localhost:5000/trade_frontend . && docker push localhost:5000/trade_backend'
-        sh 'docker-compose'
       }
     }
     stage('Deploy') {
-      agent {
-        node {
-          label 'master'
-        }
-        
-      }
+      agent any
       steps {
-        sh 'ls'
+        sh 'docker-compose'
         sh 'pwd'
         sh 'docker ps -a && docker images'
       }
