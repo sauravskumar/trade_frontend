@@ -14,7 +14,6 @@ pipeline {
         sh 'npm run build'
         sh 'ls'
         sh 'npm run start &'
-        sh 'docker'
       }
     }
     stage('Deploy') {
