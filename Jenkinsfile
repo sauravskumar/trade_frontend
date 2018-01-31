@@ -26,7 +26,7 @@ pipeline {
       steps {
         sh 'ls'
         sh 'pwd'
-        sh 'docker'
+        sh 'docker ps -a'
       }
     }
   }
