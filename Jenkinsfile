@@ -1,19 +1,17 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-    
-  }
+  agent none
   stages {
-    stage('Test') {
-      steps {
-        echo 'Test Stage'
+    stage('Build') {
+      agent {
+        docker {
+          image 'node'
+          args '-p 3000:3000 --name trade_frontend'
+        }
+        
       }
-    }
-    stage('Deploy') {
       steps {
-        sh 'ls && pwd && cd /usr/src/app && ls && npm run start &'
+        sh 'npm install'
+        sh 'npm run build'
       }
     }
   }
