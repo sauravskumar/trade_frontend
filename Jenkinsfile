@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'docker build -t localhost:5000/trade_frontend . && docker push localhost:5000/trade_backend'
         sh 'docker run -d --name trade_frontend -p 3000:3000 localhost:5000/trade_frontend'
-        sh 'docker exec trade_frontend /bin/bash && ls && pwd'
+        sh 'docker exec trade_frontend /bin/bash -c "npm run start" && ls && pwd'
       }
     }
     stage('Deploy') {
