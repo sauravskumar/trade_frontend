@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       agent {
-        docker {
-          image 'node'
-          args '-p 3000:3000 --name trade_frontend -v /var/run/docker.sock:/var/run/docker.sock'
+        dockerfile {
+          filename 'Dockerfile'
         }
         
       }
@@ -26,7 +25,7 @@ pipeline {
       steps {
         sh 'ls'
         sh 'pwd'
-        sh 'docker ps -a'
+        sh 'docker ps -a && docker images'
       }
     }
   }
