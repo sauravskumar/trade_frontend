@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build --name trade_backend .'
+        sh 'docker build -t trade_backend .'
         sh 'docker run -d --name trade_frontend -p 3000:3000 trade_frontend'
         sh 'docker exec trade_frontend /bin/bash && ls && pwd'
       }
