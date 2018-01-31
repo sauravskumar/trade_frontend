@@ -26,6 +26,7 @@ pipeline {
       steps {
         sh 'ls'
         sh 'pwd'
+        sh 'docker'
       }
     }
   }
