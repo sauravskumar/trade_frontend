@@ -12,9 +12,11 @@ pipeline {
       steps {
         sh 'npm install'
         sh 'npm run build'
+        sh 'ls'
+        sh 'npm run start'
       }
     }
-    stage('') {
+    stage('Deploy') {
       agent {
         docker {
           image 'node'
