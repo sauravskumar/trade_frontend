@@ -19,13 +19,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        try {
-          sh 'docker rm trade_frontend'
-        }
-        catch (exc) {
-          echo 'container not prensent'
-          throw
-        }
+        sh 'docker rm trade_frontend'
         sh 'docker run --name trade_frontend -p 3000:3000 localhost:5000/trade_frontend /bin/bash -c "ls && npm run start &"'
       }
     }
