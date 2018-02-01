@@ -1,3 +1,3 @@
 export default () => (
-  <div>Done</div>
+  <div>Dones</div>
 )
