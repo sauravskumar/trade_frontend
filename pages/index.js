@@ -1,3 +1,5 @@
 export default () => (
-  <div>Done sssssssssss</div>
+  <div>
+    <h1>Trade</h1>
+  </div>
 )
