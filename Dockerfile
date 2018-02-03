@@ -17,7 +17,3 @@ ENV docker true
 COPY . /usr/src/app
 
 RUN npm run build
-
-VOLUME /var/run/docker.sock
-
-EXPOSE 3000
