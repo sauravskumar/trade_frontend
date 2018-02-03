@@ -1,5 +1,5 @@
 export default () => (
   <div>
-    <h1>Trade Now - Dev</h1>
+    <h1>Trade Now</h1>
   </div>
 )
