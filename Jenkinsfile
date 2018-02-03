@@ -29,7 +29,6 @@ pipeline {
       steps {
         script{
             if (env.BRANCH_NAME == 'master') {
-                      try {
                         try {
                             sh 'docker stop trade_frontend'
                             sh 'docker rm trade_frontend'
