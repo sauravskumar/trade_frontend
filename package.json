@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "node server.js",
+    "dev": "PORT=3100 node server.js",
     "build": "next build",
     "start": "next start"
   },
