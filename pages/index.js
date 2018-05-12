@@ -28,7 +28,7 @@ const Index = (props) => {
 }
 
 Index.getInitialProps = async function () {
-  const res = await fetch('http://172.17.0.4:4100/cryptopia/btc')
+  const res = await fetch('http://51.15.57.130:4100/cryptopia/btc')
   const data = await res.json()
 
   console.log(`Show data fetched. Count: ${data.length}`);
